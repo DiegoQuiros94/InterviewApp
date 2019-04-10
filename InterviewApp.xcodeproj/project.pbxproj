@@ -50,6 +50,7 @@
 		0C210BAC225E1B2A0057D0AF /* InterviewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C210BB0225E1B2A0057D0AF /* InterviewAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewAppUITests.swift; sourceTree = "<group>"; };
 		0C210BB2225E1B2A0057D0AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C210BBE225E2C3D0057D0AF /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		166CD082D0B6578820C2A443 /* Pods-InterviewApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewApp/Pods-InterviewApp.debug.xcconfig"; sourceTree = "<group>"; };
 		21352EFB60CD562139181D21 /* Pods-InterviewAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewAppUITests/Pods-InterviewAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3BCE1522468B9AC515998533 /* Pods-InterviewAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InterviewAppTests/Pods-InterviewAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 		39DE4639E3CE0CF6F5A42C88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C210BBE225E2C3D0057D0AF /* Kingfisher.framework */,
 				AB2E49E8C50F105740BA8C3E /* Pods_InterviewApp.framework */,
 				48686B89547EE2C48AD1828C /* Pods_InterviewAppTests.framework */,
 				725CD9C5724C4AF7AF296EA6 /* Pods_InterviewAppUITests.framework */,
@@ -177,6 +179,7 @@
 				0C210B8A225E1B280057D0AF /* Frameworks */,
 				0C210B8B225E1B280057D0AF /* Resources */,
 				8BE80492670FCE291E3D4EA5 /* [CP] Embed Pods Frameworks */,
+				0C210BC0225E2DE70057D0AF /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -296,6 +299,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C210BC0225E2DE70057D0AF /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		8697EDB600577AA4B48A462D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -569,6 +590,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InterviewApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -587,6 +612,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = InterviewApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

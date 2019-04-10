@@ -1,0 +1,12 @@
+
+# CocoaPods noise
+Pods/
+builds
+
+# Carthage
+Carthage/*
+.carthage_cache.yml
+
+# Frameworks
+Frameworks/*
+
